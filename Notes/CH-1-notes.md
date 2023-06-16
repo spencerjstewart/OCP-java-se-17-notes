@@ -106,12 +106,12 @@ java-cp/home/zoodirectory Zoo
 		- you can use a wrapper to assign null to a primitive
 - text blocks
 - line break required after first `"""` and before last `"""`
-	- ```java
-	String textBlock = """
-	Hello
-	World
-	""";
-  ```
+```java
+String textBlock = """
+Hello
+World
+""";
+```
 
 ### Declaring variables
 
@@ -122,10 +122,10 @@ java-cp/home/zoodirectory Zoo
 	4. case sensitive
 
 - you can declare multiple variables on 1 line
-	- ```java
-	int a, b, c = 0;
-	int a = 0, b = 0, c = 0;
-    ```
+```java
+int a, b, c = 0;
+int a = 0, b = 0, c = 0;
+  ```
 
 ### Initializing variables
 
