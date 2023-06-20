@@ -168,119 +168,174 @@ int a = 0, b = 0, c = 0;
 
 ### Practice questions
 
-~~1~~ 
-- c, d, e
 - option C is incorrect because main() method must be static
 
-~~2~~ 
-- C
-- C is correct
 - D and E are also correct because both the package and import statements are optional
 
-3
-- A, E
+- Public is a valid identifier
+- _Q2_ is a valid identifier
 
-~~4~~ 
-- B
-- E and G are also fine
-	- Public is a valid identifier
-	- _Q2_ is a valid identifier
-
-~~5~~
-- A, C, F
-- C is not correct
-- D is correct
 - Remember that if an object is being used by another object, it is not eligible for GC
   even if you assign it null
 
-6
-- F
 - cross out blocks that are unreachable to easily find the answer to scope questions
 
-7
-- C, E
 - don't be tricked by text blocks
 - remember local variables must be initialized before use, but they can be declared without
   being initialized and the code will compile
 
-~~8~~ 
-- B, D, H
 - E is also correct, you are allowed to compile something like `var num = 1/0`, but it throws an exception
   at runtime, and the question is about what compiles/is valid
 
-9
-- E
 - remember that local variables have no default value, but class and instance variables do
 
-~~10~~ 
-- A, C, E, F, G
-- C and G are not correct
 - Remember you cannot place underscores at the beginning or end of a numeric literal
 - Remember you cannot place underscores before or after a decimal point
 
-~~11~~ 
-- D
 - Remember that you don't need to import classes in the same package
 - Remember importing java.lang is optional
 
-12
-- A, C, D
-
-~~13~~ 
-- B, C, D, E
 - When thinking about whether or not import statements will compile, you need to keep in mind ambiguity.
 - Remember a wildcard can only be used to import classes from a specific, not subpackages of that specific package
 
-14 
-- A, B, D, E
 
-~~15~~ 
-- C, F
-- E is also correct.
-	- An object may be eligible for garbage collection but never removed from the heap.
-		- This is just another way of saying GC is not guaranteed to run
+- An object may be eligible for garbage collection but never removed from the heap.
+  - This is just another way of saying GC is not guaranteed to run
 
-~~16~~ 
-- B, E, F
-- A and D were correct
 - Leading whitespace does nothing in text blocks.
 - You can escape the end of a text block with a backslash
 	- If you use the enter key after the backslash, you will only see 1 line
 - `"""\"""` is a valid text block
 
-~~17~~ 
-- A, D, G
-- A is not correct. F is correct.
 - You can concatenate Strings with null.
 
-~~18~~
-- A, B, C, F
-- A is not correct.
-	- `var` cannot be used as a method parameter
+
+- `var` cannot be used as a method parameter
 - We know the type of var at compile time.
 
-~~19~~ 
-- A, E
-- D is correct, E is not correct.
 - Long.parseLong returns a `long`
 - Love.valueOf returns a `Long`
 
-20 
-- A, B
-- only C is correct
 - Remember what defines a valid constructor.
 
-~~21~~
 - Memorize the order in which code is executed.
 - Static variables and blocks are executed in the order they appear in the file *when an object is created*
 
-~~22~~ 
-- G
-- C and F were also correct.
 - Remember that binary and hexadecimal values can be assigned to byte, short, int, and long variables.
 - Remember you prepend binary values with `0b` or `0B` and hexadecimal values with `0x` or `0X`
 
-23
-- A, D
+
 - Remember a double like 50.0 cannot be initialized to a float variable without a cast
 	- must append `f` or `F` to the value
+
+### Practice questions based on notes
+
+Which of the following is a valid main() method declaration in Java? (Choose all that apply)
+A. public void main(String[] args)
+B. public static void main(String args)
+C. public static void main(String[] args)
+D. static public void main(String[] args)
+E. public static main(String[] args)
+
+Which of the following are valid identifiers in Java? (Choose all that apply)
+A. Public
+B. _Q2_
+C. 2Q_
+D. var
+E. static
+
+Consider the following code snippet:
+
+java
+Copy code
+var num;
+System.out.println(num);
+What will be the result of compiling and running this code?
+A. The code will not compile.
+B. The code will compile and print null.
+C. The code will compile and print 0.
+D. The code will compile and print an empty string.
+E. The code will compile but throw a NullPointerException at runtime.
+
+Which of the following are valid ways to declare a numeric literal in Java? (Choose all that apply)
+A. int num1 = 123_456;
+B. int num2 = 123__456;
+C. double num3 = 1.23_456;
+D. double num4 = 1.23__456;
+E. int num5 = _123456;
+
+Which of the following statements about import in Java are correct? (Choose all that apply)
+A. You don't need to import classes in the same package.
+B. Importing java.lang is mandatory.
+C. A wildcard can be used to import classes from a specific package and its subpackages.
+D. Importing a class can cause a compile error due to ambiguity.
+E. Importing java.lang is optional.
+
+Consider the following code snippet:
+
+java
+Copy code
+var text = """
+Hello, World!\
+""";
+System.out.println(text);
+What will be the output of this code?
+A. Hello, World!
+B. Hello, World!\
+C. Hello, World!\n
+D. Hello, World!\\
+E. The code will not compile.
+
+Which of the following statements about var in Java are correct? (Choose all that apply)
+A. var can be used as a method parameter.
+B. The type of var is known at compile time.
+C. var can be used to declare instance variables.
+D. var can be used to declare local variables.
+E. var can be used to declare class variables.
+
+Which of the following statements about constructors in Java are correct? (Choose all that apply)
+A. A constructor can have a return type.
+B. A constructor must have the same name as the class.
+C. A constructor can take parameters.
+D. A constructor can be private.
+E. A constructor can be abstract.
+
+Given the following code snippet, what will be the output?
+
+java
+Copy code
+var num = 1/0;
+System.out.println(num);
+A. The code will not compile.
+B. The code will compile but throw an ArithmeticException at runtime.
+C. The code will compile and print Infinity.
+D. The code will compile and print 0.
+E. The code will compile and print NaN.
+
+Which of the following statements about numeric literals in Java are correct? (Choose all that apply)
+A. You can place underscores at the beginning or end of a numeric literal.
+B. You can place underscores before or after a decimal point.
+C. Binary and hexadecimal values can be assigned to byte, short, int, and long variables.
+D. You prepend binary values with 0b or 0B and hexadecimal values with 0x or 0X.
+E. A double like 50.0 can be initialized to a float variable without a cast.
+
+Which of the following statements about text blocks in Java are correct? (Choose all that apply)
+A. Leading whitespace does nothing in text blocks.
+B. You can escape the end of a text block with a backslash.
+C. """\""" is a valid text block.
+D. You can concatenate Strings with null in a text block.
+E. Text blocks can contain any character except for the triple-quote """.
+
+Which of the following statements about the var keyword in Java are correct? (Choose all that apply)
+A. var cannot be used as a method parameter.
+B. The type of a var variable is known at compile time.
+C. var can be used to declare local variables.
+D. var can be used to declare instance variables.
+E. var can be used to declare class variables.
+
+Which of the following statements about constructors in Java are correct? (Choose all that apply)
+A. A constructor must have the same name as the class.
+B. A constructor can have a return type.
+C. A constructor can be private.
+D. A constructor can be static.
+E. A constructor can be abstract.
