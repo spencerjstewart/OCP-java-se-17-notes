@@ -85,6 +85,7 @@
 - a, d, f, h
 
 ~~4~~
+
 - e
 - the switch expression must cover all possible values
   - this can be done with a default case
